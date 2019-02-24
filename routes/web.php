@@ -15,6 +15,8 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/articles',['uses'=>'Admin\Core@getArticles','as'=>'articles']);
+
 
 Route::get('/about', 'FirstController@show');
 Route::get('/usmc', 'UsmcController@guns');

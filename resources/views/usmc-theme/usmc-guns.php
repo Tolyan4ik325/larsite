@@ -192,6 +192,19 @@ function topFunction() {
 .rsContainer{width:100%; max-width:375px; min-height:335px; max-height:335px; display:inline-block; position:relative; background-color:#000; float:left; margin:1.25%; margin-bottom:60px; vertical-align:top; overflow:hidden;}
 </style>
 
+
+
+
+
+
+<?php
+
+
+getArticles();
+?>
+
+
+
   <div class="box">
 
 <a href="/smallarms/detail.asp?smallarms_id=1074" title="Development and Operational History, Technical Specifications and Detailed Pictures of the AirTronic PSRL-1 (RPG-7USA)" style="text-decoration:none;">
