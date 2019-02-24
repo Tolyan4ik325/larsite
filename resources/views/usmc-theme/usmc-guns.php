@@ -1,4 +1,8 @@
+<?php
+use App\Article;
 
+
+?>
 
 
 <!DOCTYPE html>
@@ -195,15 +199,13 @@ function topFunction() {
 
 
 
-
-
 <?php
 
 
-getArticles();
-?>
+$articles = Article::all();
 
-
+foreach ($articles as $article) {
+  ?>
 
   <div class="box">
 
@@ -213,7 +215,7 @@ getArticles();
 
 <div style="width:auto; display:inline-block; position:absolute; top:0; left:0; z-index:88;">
   <div style="width:auto; position:relative; padding:5px 7px 5px 7px; background-color:#000; z-index:77;">
-      <span class="textLighterGray textLarge">#1</span>
+      <span class="textLighterGray textLarge">#<?php echo $article->id?></span>
     </div>
 </div>
 
@@ -225,16 +227,16 @@ getArticles();
       <img style="margin-left:auto; margin-right:auto;" data-original="/imgs/design/flags/united_states.png" src="/imgs/spacer.gif" alt="National Flag Graphic" />
     </div>
 </div>
-<div class="picTrans" style="width:100%; max-width:375px; height:100%; max-height:258px; display:inline-block; position:relative; background-color:#000; background-image:url(https://www.militaryfactory.com/smallarms/med/browning-m1919-machine-gun.jpg); background-position:center; background-size:100%; float:left;">
+<div class="picTrans" style="width:100%; max-width:375px; height:100%; max-height:258px; display:inline-block; position:relative; background-color:#000; background-image:url(<?php echo $article->img?>); background-position:center; background-size:100%; float:left;">
   <img style="width:100%; height:100%; min-height:258px;" class="noBorder" data-original="/smallarms/med/airtronic-psrl1-rocket-propelled-grenade-united-states.jpg" src="" alt="Picture of the AirTronic PSRL-1 (RPG-7USA)" />
 </div>
 
 <div class="picTrans" style="width:100%; display:inline-block; position:relative; padding:5px; padding-left:10px; text-align:left; background-color:#00667d; text-overflow:ellipsis; white-space:nowrap; overflow:hidden; float:left;">
-  <span class="textLarge textWhite textBold">Имя</span>
+  <span class="textLarge textWhite textBold"><?php echo $article->name?></span>
 </div>
 
 <div style="width:100%; display:inline-block; position:relative; padding:5px; padding-left:10px; text-align:left; background-color:#000; text-overflow:ellipsis; white-space:nowrap; overflow:hidden; box-sizing:border-box; border-bottom:thin solid #ffab1b;">
-  <span class="textMedium1 textWhite">Anti-Armor / Anti-Personnel Shoulder-Fired Rocket Launcher</span>
+  <span class="textMedium1 textWhite"><?php echo $article->text?></span>
 </div>
 
 </div>
@@ -242,6 +244,16 @@ getArticles();
 </a>
 
 </div>
+
+<?php } ?>
+
+
+
+
+</div>
+
+
+
 
 
 

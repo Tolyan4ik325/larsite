@@ -15,6 +15,10 @@ class Core extends Controller
 	public function getArticles() {
 	
 		$articles = Article::all();
+		foreach ($articles as $article) {
+			echo $article->name."<br>";
+			echo $article->img."<br>";
+		}
 		dump($articles);
 	}
 }
