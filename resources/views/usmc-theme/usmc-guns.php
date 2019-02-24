@@ -191,14 +191,7 @@ function topFunction() {
 <style>
 .rsContainer{width:100%; max-width:375px; min-height:335px; max-height:335px; display:inline-block; position:relative; background-color:#000; float:left; margin:1.25%; margin-bottom:60px; vertical-align:top; overflow:hidden;}
 </style>
-<?php $users = DB::select("select `name` from `guns` where `id`=1");
-foreach ($users as $user) {
-  foreach ($user as $name) {
-  }
-}
-?>
-<?php for ($i=0; $i < count(DB::select('select `id` from `guns`')) ; $i++) { 
-  ?>
+
   <div class="box">
 
 <a href="/smallarms/detail.asp?smallarms_id=1074" title="Development and Operational History, Technical Specifications and Detailed Pictures of the AirTronic PSRL-1 (RPG-7USA)" style="text-decoration:none;">
@@ -219,19 +212,12 @@ foreach ($users as $user) {
       <img style="margin-left:auto; margin-right:auto;" data-original="/imgs/design/flags/united_states.png" src="/imgs/spacer.gif" alt="National Flag Graphic" />
     </div>
 </div>
-<?php $users = DB::select("select `img` from `guns` where id = :id", ['id'=>2]);
-foreach ($users as $user) {
-  foreach ($user as $gun) {
-    // echo $gun;
-  }
-}
-?>
 <div class="picTrans" style="width:100%; max-width:375px; height:100%; max-height:258px; display:inline-block; position:relative; background-color:#000; background-image:url(https://www.militaryfactory.com/smallarms/med/browning-m1919-machine-gun.jpg); background-position:center; background-size:100%; float:left;">
-  <img style="width:100%; height:100%; min-height:258px;" class="noBorder" data-original="/smallarms/med/airtronic-psrl1-rocket-propelled-grenade-united-states.jpg" src="<?php echo $gun;?>" alt="Picture of the AirTronic PSRL-1 (RPG-7USA)" />
+  <img style="width:100%; height:100%; min-height:258px;" class="noBorder" data-original="/smallarms/med/airtronic-psrl1-rocket-propelled-grenade-united-states.jpg" src="" alt="Picture of the AirTronic PSRL-1 (RPG-7USA)" />
 </div>
 
 <div class="picTrans" style="width:100%; display:inline-block; position:relative; padding:5px; padding-left:10px; text-align:left; background-color:#00667d; text-overflow:ellipsis; white-space:nowrap; overflow:hidden; float:left;">
-  <span class="textLarge textWhite textBold"><?php echo $name;?></span>
+  <span class="textLarge textWhite textBold">Имя</span>
 </div>
 
 <div style="width:100%; display:inline-block; position:relative; padding:5px; padding-left:10px; text-align:left; background-color:#000; text-overflow:ellipsis; white-space:nowrap; overflow:hidden; box-sizing:border-box; border-bottom:thin solid #ffab1b;">
@@ -243,7 +229,6 @@ foreach ($users as $user) {
 </a>
 
 </div>
-<?php } ?>
 
 
 
