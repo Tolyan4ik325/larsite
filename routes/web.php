@@ -14,17 +14,3 @@
 Route::get('/', function () {
     return view('welcome');
 });
-
-Route::get('/articles',['uses'=>'Admin\Core@getArticles','as'=>'articles']);
-
-
-Route::get('/about', 'FirstController@show');
-Route::get('/usmc', 'UsmcController@guns');
-
-Route::get('/', function () {
-    return view('jnep-theme.jnep-main', ['name' => 'James', 'name_2' => 'Oleg Universal']);
-});
-
-Route::get('/usmc', function () {
-    return view('usmc-theme.usmc-guns', ['name' => 'James', 'name_2' => 'Oleg Universal']);
-});
